@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import '../models/product.dart';
-import '../controllers/cart_controller.dart'; // Import CartController
+import '../controllers/cart_controller.dart'; 
 
 class ProductDetailPage extends StatelessWidget {
   final Product product;
-  final CartController cartController = Get.find<CartController>(); // Use Get.find to access CartController
+  final CartController cartController = Get.find<CartController>(); 
 
   ProductDetailPage({super.key, required this.product, required CartController cartController});
 
@@ -16,7 +16,7 @@ class ProductDetailPage extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Get.back(); // Navigate back to the previous screen
+            Get.back();
           },
           icon: const Icon(
             Iconsax.arrow_left_2,
@@ -36,7 +36,6 @@ class ProductDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Product image
             SizedBox(
               height: 300,
               width: double.infinity,
@@ -46,7 +45,6 @@ class ProductDetailPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            // Product title
             Text(
               product.title ?? "No Title",
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -67,7 +65,7 @@ class ProductDetailPage extends StatelessWidget {
               textAlign: TextAlign.start,
             ),
             const SizedBox(height: 24),
-            // Cart management
+            
             Obx(() {
               final itemCount = cartController.cartItems[product] ?? 0;
               return Row(

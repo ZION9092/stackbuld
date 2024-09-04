@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/favorites_controller.dart';
-import '../widgets/product_card.dart'; // Reuse ProductCard
+import '../widgets/product_card.dart'; 
 
 class FavoritesPage extends StatelessWidget {
   final FavoritesController favoritesController = Get.find<FavoritesController>();

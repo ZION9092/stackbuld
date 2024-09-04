@@ -10,7 +10,6 @@ class ProfilePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          // Profile Header Section
           Container(
             height: MediaQuery.of(context).size.height * 0.35,
             decoration: BoxDecoration(
@@ -25,7 +24,6 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Profile title and Edit Button
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -44,7 +42,6 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          // Handle Edit Profile
                         },
                         child: Text(
                           "Edit Profile",
@@ -57,7 +54,6 @@ class ProfilePage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  // Profile Image, Name, and Email
                   Row(
                     children: [
                       const CircleAvatar(
@@ -92,63 +88,53 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          // Profile Options Section
           Expanded(
             child: ListView(
               padding: const EdgeInsets.all(16.0),
               children: [
-                // Account Settings
                 ListTile(
                   leading: Icon(Iconsax.user_edit, color: Colors.blue.shade900),
                   title: const Text('Account Settings'),
                   onTap: () {
-                    // Handle Account Settings
                   },
                 ),
                 const Divider(),
-                // Notifications
                 ListTile(
                   leading:
                       Icon(Iconsax.notification, color: Colors.blue.shade900),
                   title: const Text('Notifications'),
                   onTap: () {
-                    // Handle Notifications
                   },
                 ),
                 const Divider(),
-                // Payment Methods
                 ListTile(
                   leading: Icon(Iconsax.card, color: Colors.blue.shade900),
                   title: const Text('Payment Methods'),
-                  onTap: () {
-                    // Handle Payment Methods
-                  },
+                  onTap: () {},
                 ),
                 const Divider(),
                 // Security
                 ListTile(
                   leading: Icon(Iconsax.lock, color: Colors.blue.shade900),
                   title: const Text('Security'),
-                  onTap: () {
-                    // Handle Security
-                  },
+                  onTap: (){},
                 ),
                 const Divider(),
-                // Help and Support
+                
                 ListTile(
                   leading: Icon(Iconsax.support, color: Colors.blue.shade900),
                   title: const Text('Help & Support'),
                   onTap: () {
-                    // Handle Help & Support
+                   
                   },
                 ),
                 const Divider(),
-                // Logout
+                
                 ListTile(
                   leading: const Icon(Iconsax.logout, color: Colors.red),
                   title: const Text('Logout'),
                   onTap: () {
-                    // Handle Logout
+                    
                   },
                 ),
               ],

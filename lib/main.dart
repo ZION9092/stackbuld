@@ -8,8 +8,8 @@ import 'screens/home_screen.dart';
 Future<void> main() async {
      WidgetsFlutterBinding.ensureInitialized();
      await Firebase.initializeApp();
-     Get.put(CartController()); // Register CartController
-     Get.put(SearchController()); // Initialize SearchController
+     Get.put(CartController()); 
+     Get.put(SearchController()); 
 
   runApp(const MyApp());
 }

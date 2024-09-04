@@ -16,8 +16,8 @@ import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key}) {
-    Get.put(FavoritesController()); // Initialize FavoritesController
-    Get.put(CartController()); // Initialize CartController
+    Get.put(FavoritesController()); 
+    Get.put(CartController()); 
   }
 
   @override
@@ -65,19 +65,18 @@ class _HomeScreenState extends State<HomeScreen> {
         price: 15.50,
         description: "Samsonite Classic Leather Backpack"
         ),
-    // Additional products
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-    _pageController.jumpToPage(index); // Navigate to the selected page
+    _pageController.jumpToPage(index); 
   }
 
   @override
   Widget build(BuildContext context) {
-    final CartController cartController = Get.find(); // Access CartController
+    final CartController cartController = Get.find(); 
 
     return Container(
       color: Colors.blue.shade900,

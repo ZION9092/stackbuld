@@ -32,7 +32,7 @@ class CartPage extends StatelessWidget {
       body: Obx(() {
         final cartItems = cartController.cartItems;
 
-        // Check if the cart is empty
+        
         if (cartItems.isEmpty) {
           return Center(
             child: Text(
@@ -43,7 +43,7 @@ class CartPage extends StatelessWidget {
           );
         }
 
-        // Display cart items if the cart is not empty
+        // Show cart items if cart isn't empty
         return ListView.builder(
           itemCount: cartItems.length,
           itemBuilder: (context, index) {

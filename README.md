@@ -34,3 +34,5 @@ MetaMind is a beautifully designed catalog app built with Flutter, providing a s
    git clone https://github.com/ZION9092/stackbuld.git
    cd metamind
 
+### Side Note
+Integrating firebase wasn't succesful as I've not fully mastered it.

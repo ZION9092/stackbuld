@@ -14,7 +14,6 @@ class _SearchPageState extends State<SearchPage> {
   final List<Product> allProducts = [
     // Product(imageAsset: 'assets/images/bag4.jpg', title: 'Laptop Bag', price: 8.99),
     // Product(imageAsset: 'assets/images/bag5.jpg', title: 'Sky Bag', price: 12.00),
-    // Add more products here
   ];
 
   List<Product> searchResults = [];
@@ -25,7 +24,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   void initState() {
     super.initState();
-    searchResults = allProducts; // Initialize with all products
+    searchResults = allProducts;
   }
 
   void updateSearchResults(String query) {
@@ -49,7 +48,6 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          // Sticky AppBar with search field
           SliverAppBar(
             pinned: true,
             floating: true,
@@ -68,12 +66,12 @@ class _SearchPageState extends State<SearchPage> {
               style: const TextStyle(color: Colors.white),
             ),
           ),
-          // Display loading indicator
+          
           if (isLoading)
             const SliverFillRemaining(
               child: Center(child: CircularProgressIndicator()),
             ),
-          // Display error message if there's an error
+          
           if (hasError)
             SliverFillRemaining(
               child: Column(
@@ -89,7 +87,7 @@ class _SearchPageState extends State<SearchPage> {
                 ],
               ),
             ),
-          // Display search results in list format
+        
           if (!isLoading && !hasError)
             searchResults.isEmpty
                 ? const SliverFillRemaining(

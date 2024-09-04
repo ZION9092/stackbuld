@@ -2,13 +2,13 @@ class Product {
   final String imageAsset;
   final String? title;
   final double? price;
-  final String? description; // Add this field
+  final String? description; 
 
   Product({
     required this.imageAsset,
     this.title,
     this.price,
-    this.description, // Add this field
+    this.description, 
   });
 
   factory Product.fromFirestore(Map<String, dynamic> data) {
