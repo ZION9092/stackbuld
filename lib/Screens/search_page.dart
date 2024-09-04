@@ -12,8 +12,12 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   final List<Product> allProducts = [
-    // Product(imageAsset: 'assets/images/bag4.jpg', title: 'Laptop Bag', price: 8.99),
-    // Product(imageAsset: 'assets/images/bag5.jpg', title: 'Sky Bag', price: 12.00),
+    Product(imageAsset: 'assets/images/bag4.jpg', title: 'USB Travel BackPack', price: 8.99),
+    Product(imageAsset: 'assets/images/bag5.jpg', title: 'Sky Bag', price: 12.00),
+    Product(imageAsset: 'assets/images/bag5.jpg', title: 'WaterProof Shoulder Bag', price: 15.50),
+    Product(imageAsset: 'assets/images/bag5.jpg', title: "Female's simple BagPacks", price: 15.50),
+    Product(imageAsset: 'assets/images/bag5.jpg', title: 'Denim', price: 15.50),
+    Product(imageAsset: 'assets/images/bag5.jpg', title: 'Leather BackPack', price: 15.50),
   ];
 
   List<Product> searchResults = [];
